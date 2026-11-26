@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#18264b">
+  <meta name="description" content="Arabia Quest — belajar Bahasa Arab melalui petualangan, permainan, dan tantangan interaktif.">
+  <title>Arabia Quest — Explore Arabic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-page="home">
+        <span class="brand-mark">ع</span>
+        <span><b>Arabia Quest</b><small>LEARN • PLAY • GROW</small></span>
+      </a>
+      <div class="side-label">MENU UTAMA</div>
+      <nav class="nav-list">
+        <button class="nav-link active" data-page="home"><span>⌂</span> Beranda</button>
+        <button class="nav-link" data-page="map"><span>⌁</span> Peta Belajar</button>
+        <button class="nav-link" data-page="lessons"><span>▤</span> Materi Belajar</button>
+        <button class="nav-link" data-page="vocab"><span>文</span> Kosakata</button>
+        <button class="nav-link" data-page="games"><span>✦</span> Mini Games</button>
+        <button class="nav-link" data-page="quiz"><span>?</span> Kuis & Evaluasi</button>
+        <button class="nav-link" data-page="achievements"><span>♜</span> Pencapaian</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="quest-card">
+          <div class="quest-spark">✦</div>
+          <b>Teruslah belajar!</b>
+          <p>Satu langkah kecil hari ini, kemampuan hebat esok hari.</p>
+          <div class="quest-progress"><i></i></div>
+          <small id="side-progress">0% perjalanan selesai</small>
+        </div>
+        <button class="nav-link" data-page="about"><span>ⓘ</span> Tentang</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Buka menu">☰</button>
+        <div class="breadcrumb">Ruang belajar <span>/</span> <b id="page-name">Beranda</b></div>
+        <div class="top-actions">
+          <div class="streak-pill"><span>🔥</span><b id="streak-count">1</b><small>hari</small></div>
+          <div class="xp-pill"><span>⚡</span><b id="xp-count">0</b><small>XP</small></div>
+          <button class="avatar" id="profile-button" title="Profil">AQ</button>
+        </div>
+      </header>
+
+      <section class="page active" id="page-home">
+        <div class="welcome-banner">
+          <div class="welcome-copy">
+            <span class="eyebrow light">SELAMAT DATANG DI ARABIA QUEST</span>
+            <h1>Siap berpetualang<br>belajar Bahasa Arab?</h1>
+            <p>Belajar sedikit demi sedikit. Kumpulkan XP, buka dunia baru, dan jadilah Arabic Explorer!</p>
+            <button class="btn btn-yellow" data-go="map">Mulai Petualangan <span>→</span></button>
+          </div>
+          <div class="welcome-art">
+            <div class="sun"></div><div class="moon-star">✦</div>
+            <div class="art-book">ع</div>
+            <div class="art-cloud cloud-one"></div><div class="art-cloud cloud-two"></div>
+            <div class="art-caption">مَرْحَبًا!</div>
+          </div>
+          <div class="banner-orb orb-one"></div><div class="banner-orb orb-two"></div>
+        </div>
+
+        <div class="section-heading"><div><span class="eyebrow">PERJALANANMU</span><h2>Ringkasan belajar</h2></div><span class="today-chip" id="today-label">Hari ini</span></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-icon purple">⚡</div><div><small>Total pengalaman</small><strong id="stat-xp">0 XP</strong><span class="stat-note">Kumpulkan lebih banyak!</span></div></article>
+          <article class="stat-card"><div class="stat-icon orange">🔥</div><div><small>Streak belajar</small><strong id="stat-streak">1 hari</strong><span class="stat-note">Jaga konsistensimu</span></div></article>
+          <article class="stat-card"><div class="stat-icon green">✓</div><div><small>Materi selesai</small><strong id="stat-lessons">0 materi</strong><span class="stat-note">Terus tingkatkan!</span></div></article>
+          <article class="stat-card"><div class="stat-icon blue">🏅</div><div><small>Pencapaian</small><strong id="stat-badges">0 badge</strong><span class="stat-note">Buktikan kemampuanmu</span></div></article>
+        </div>
+
+        <div class="home-grid">
+          <div class="content-column">
+            <div class="section-heading compact"><div><span class="eyebrow">LANJUTKAN BELAJAR</span><h2>Perjalanan berikutnya</h2></div><button class="text-button" data-go="map">Lihat peta →</button></div>
+            <div class="continue-card">
+              <div class="continue-icon">م</div><div class="continue-info"><span class="tag tag-purple">WORLD 1 • PEMULA</span><h3> عالم الحروف — Dunia Huruf</h3><p>Kenali huruf dan bunyi dasar Bahasa Arab.</p><div class="mini-progress"><i id="home-progress"></i></div><small id="home-progress-label">0% selesai</small></div>
+              <button class="circle-arrow" data-go="lessons">→</button>
+            </div>
+            <div class="section-heading compact mt-28"><div><span class="eyebrow">LATIHAN SERU</span><h2>Coba permainan</h2></div><button class="text-button" data-go="games">Semua game →</button></div>
+            <div class="game-preview-grid">
+              <button class="game-preview" data-game="match"><span class="game-emoji">🧩</span><b>Pasangkan Kata</b><small>Cocokkan Arab dan arti</small></button>
+              <button class="game-preview" data-game="picture"><span class="game-emoji">🖼️</span><b>Tebak Makna</b><small>Kenali kosakata</small></button>
+              <button class="game-preview" data-game="sentence"><span class="game-emoji">🔤</span><b>Susun Kalimat</b><small>Rangkai kata Arab</small></button>
+            </div>
+          </div>
+          <aside class="right-column">
+            <div class="panel-card profile-panel"><div class="panel-title"><h3>Profil petualang</h3><span class="more-dot">•••</span></div><div class="profile-main"><div class="profile-avatar">🧑‍🎓</div><div><b id="student-name">Penjelajah</b><small id="student-class">Siswa • Kelas VII</small></div></div><div class="level-row"><span>Level <b id="level-number">1</b></span><b id="level-title">Arabic Beginner</b></div><div class="level-track"><i id="level-progress"></i></div><small class="muted" id="level-xp">0 / 100 XP menuju level berikutnya</small></div>
+            <div class="panel-card challenge-panel"><div class="panel-title"><h3>🎯 Misi hari ini</h3><span class="tag tag-green">HARIAN</span></div><p>Selesaikan satu aktivitas belajar untuk mendapatkan bonus.</p><div class="challenge-row"><span class="challenge-icon">📚</span><div><b>Belajar satu materi</b><small>Hadiah +20 XP</small></div><span class="challenge-check" id="daily-check">○</span></div><button class="btn btn-outline full" data-go="lessons">Kerjakan misi</button></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page" id="page-map">
+        <div class="page-intro"><span class="eyebrow">LEARNING ADVENTURE</span><h1>Peta Petualangan</h1><p>Jelajahi dunia Bahasa Arab. Selesaikan setiap tantangan untuk membuka perjalanan berikutnya.</p></div>
+        <div class="map-hero">
+          <div><span class="tag tag-yellow">YOUR JOURNEY STARTS HERE</span><h2>Enam dunia, satu petualangan!</h2><p>Setiap dunia membawamu mengenal kosakata dan ungkapan baru.</p></div><div class="map-hero-icon">🗺️</div>
+        </div>
+        <div class="world-grid" id="world-grid"></div>
+      </section>
+
+      <section class="page" id="page-lessons">
+        <div class="page-intro"><span class="eyebrow">LEARN AT YOUR PACE</span><h1>Materi Pembelajaran</h1><p>Pilih kelas dan pelajari Bahasa Arab melalui materi ringkas, contoh, dan latihan.</p></div>
+        <div class="filter-row"><div class="filter-tabs" id="class-filters"><button class="filter active" data-class="VII">Kelas VII</button><button class="filter" data-class="VIII">Kelas VIII</button><button class="filter" data-class="IX">Kelas IX</button></div><span class="muted" id="lesson-count">6 materi tersedia</span></div>
+        <div class="lesson-grid" id="lesson-grid"></div>
+      </section>
+
+      <section class="page" id="page-vocab">
+        <div class="page-intro"><span class="eyebrow">BUILD YOUR VOCABULARY</span><h1>Jelajahi Kosakata</h1><p>Perkaya perbendaharaan kata. Dengarkan pelafalan dan simpan kata favoritmu.</p></div>
+        <div class="vocab-toolbar"><div class="search-box"><span>⌕</span><input id="vocab-search" placeholder="Cari kata Arab atau artinya..." aria-label="Cari kosakata"></div><select id="vocab-category"><option value="all">Semua kategori</option><option value="Sekolah">Sekolah</option><option value="Keluarga">Keluarga</option><option value="Rumah">Rumah</option><option value="Perkenalan">Perkenalan</option><option value="Warna">Warna</option></select></div>
+        <div class="vocab-grid" id="vocab-grid"></div>
+      </section>
+
+      <section class="page" id="page-games">
+        <div class="page-intro"><span class="eyebrow">PLAY TO LEARN</span><h1>Mini Games</h1><p>Asah kemampuan Bahasa Arab melalui permainan singkat yang menyenangkan.</p></div>
+        <div class="games-grid">
+          <button class="game-card" data-game="match"><span class="game-card-icon lilac">🧩</span><span class="tag tag-purple">KOSAKATA</span><h3>Pasangkan Kata</h3><p>Temukan pasangan kata Arab dan arti yang tepat.</p><span class="game-cta">Main sekarang →</span></button>
+          <button class="game-card" data-game="picture"><span class="game-card-icon peach">🖼️</span><span class="tag tag-orange">PEMAHAMAN</span><h3>Tebak Makna</h3><p>Pilih arti yang sesuai dengan kosakata Arab.</p><span class="game-cta">Main sekarang →</span></button>
+          <button class="game-card" data-game="sentence"><span class="game-card-icon mint">🔤</span><span class="tag tag-green">TATA BAHASA</span><h3>Susun Kalimat</h3><p>Susun kata menjadi kalimat sederhana.</p><span class="game-cta">Main sekarang →</span></button>
+          <button class="game-card" data-game="listen"><span class="game-card-icon sky">🎧</span><span class="tag tag-blue">MENYIMAK</span><h3>Dengar & Pilih</h3><p>Dengarkan pelafalan lalu pilih maknanya.</p><span class="game-cta">Main sekarang →</span></button>
+        </div>
+      </section>
+
+      <section class="page" id="page-quiz">
+        <div class="page-intro"><span class="eyebrow">CHECK YOUR KNOWLEDGE</span><h1>Kuis & Evaluasi</h1><p>Uji pemahamanmu. Jawaban benar akan menambah pengalaman belajar.</p></div>
+        <div class="quiz-feature"><div><span class="tag tag-yellow">ARABIC CHALLENGE</span><h2>Seberapa jauh kemampuanmu?</h2><p>Kerjakan 5 pertanyaan pilihan ganda. Baca soal dengan teliti dan raih skor terbaikmu.</p><button class="btn btn-yellow" id="start-quiz">Mulai kuis <span>→</span></button></div><div class="quiz-art">✍️</div></div>
+        <div class="section-heading compact"><div><span class="eyebrow">HASIL BELAJARMU</span><h2>Riwayat evaluasi</h2></div></div>
+        <div class="panel-card history-card" id="quiz-history"><div class="empty-state">Belum ada riwayat kuis. Yuk, coba kuis pertamamu!</div></div>
+      </section>
+
+      <section class="page" id="page-achievements">
+        <div class="page-intro"><span class="eyebrow">CELEBRATE YOUR PROGRESS</span><h1>Galeri Pencapaian</h1><p>Setiap usaha layak dirayakan. Kumpulkan badge dari perjalanan belajarmu.</p></div>
+        <div class="achievement-summary"><div class="trophy-big">🏆</div><div><h2 id="badge-total">0 dari 6 badge</h2><p>Terus belajar untuk membuka semua pencapaian!</p></div></div>
+        <div class="badge-grid" id="badge-grid"></div>
+      </section>
+
+      <section class="page" id="page-about">
+        <div class="page-intro"><span class="eyebrow">ABOUT THE PLATFORM</span><h1>Tentang Arabia Quest</h1><p>Ruang belajar Bahasa Arab yang menggabungkan materi, permainan, dan petualangan.</p></div>
+        <div class="about-card"><div class="about-logo">ع</div><h2>Belajar Bahasa Arab jadi petualangan!</h2><p>Arabia Quest dirancang sebagai media pembelajaran interaktif untuk siswa SMP/MTs. Melalui pendekatan gamifikasi, siswa diajak belajar kosakata, ungkapan, dan tata bahasa sederhana secara bertahap.</p><div class="about-values"><div><b>01</b><strong>Belajar aktif</strong><small>Materi dan latihan interaktif.</small></div><div><b>02</b><strong>Bermain cerdas</strong><small>Game yang mendukung tujuan belajar.</small></div><div><b>03</b><strong>Bertumbuh</strong><small>Progres dan pencapaian terukur.</small></div></div><p class="about-note">Catatan: Materi dalam demo ini merupakan konten contoh dan dapat disesuaikan dengan kurikulum serta buku ajar yang digunakan sekolah.</p></div>
+      </section>
+
+      <footer class="footer"><span>© 2026 Arabia Quest</span><span>Explore Arabic. Play. Learn. Master.</span></footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
